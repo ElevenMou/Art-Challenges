@@ -1,0 +1,82 @@
+<div class="amegacure">
+  
+  <div class="dots">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+  <div class="lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <div class="dots">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+  
+</div>
+<style>
+  body {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .amegacure {
+    position: relative;
+    width: 200px;
+    height: 80px;
+    background: linear-gradient(105deg, 
+                 #9897AE 82px, 
+                 #C0C3DB 82px, 
+                #C0C3DB 132px, 
+                #9897AE 132px);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .amegacure::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    z-index: -1;
+    height: 120px;
+    width: 240px;
+    background: #37385A;
+    border-radius: 20px;
+  }
+  .dots {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 50%
+  }
+  .dot:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .lines {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    
+  }
+  .line {
+    display: flex;
+    justify-content: center;
+    background: #000;
+    height: 50px;
+    width: 10px;
+    margin: 0 5px;
+    border-radius: 20px;
+  }
+</style>
