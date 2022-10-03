@@ -1,0 +1,128 @@
+<div class="skull">
+  <div class="eye eye-left"></div>
+  <div class="eye eye-right"></div>
+  <div class="bone bone-1"></div>
+  <div class="bone bone-2"></div>
+  <div class="bone bone-3"></div>
+  <div class="bone bone-4"></div>
+  <div class="teeth"></div>
+</div>
+<style>
+  body {
+    background: #000;
+  }
+  .skull {
+    position: relative;
+    width: 50px;
+    height: 100px;
+    background: #fff;
+    margin: 110px auto;
+  }
+  .skull::before {
+    content: '';
+    height: 100px;
+    width: 100px;
+    background: #fff;
+    position: absolute;
+    left: -50px;
+    border-radius: 50% 0 0 50%;
+  }
+  .skull::after {
+    content: '';
+    height: 100px;
+    width: 100px;
+    background: #fff;
+    position: absolute;
+    right: -50px;
+    border-radius: 0 50% 50% 0;
+  }
+  .eye {
+    z-index: 2;
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    border-radius: 50%;
+    background: #000;
+  }
+  .eye.eye-left {
+    top: 30px;
+    left: -30px;
+    transform: rotate(-30deg);
+  }
+  .eye.eye-right {
+    top: 30px;
+    right: -30px;
+    transform: rotate(30deg);
+  }
+  .bone {
+    position: absolute;
+    width: 20px;
+    height: 28px;
+    background: #fff;
+  } 
+  .bone::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 50%;
+  }
+  .bone::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 50%;
+  }
+  .bone-1 {
+    top: -13px;
+    left: -65px;
+    transform: rotate(-45deg)
+  }
+  .bone-2 {
+    top: -13px;
+    right: -65px;
+    transform: rotate(45deg)
+  }
+  .bone-3 {
+    bottom: -13px;
+    right: -65px;
+    transform: rotate(135deg)
+  }
+  .bone-4 {
+    bottom: -13px;
+    left: -65px;
+    transform: rotate(-135deg)
+  }
+  .teeth {
+    position: absolute;
+    width: 15px;
+    height: 20px;
+    background: #fff;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .teeth::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 20px;
+    background: #fff;
+    left: -20px;
+  }
+  .teeth::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 20px;
+    background: #fff;
+    right: -20px;
+  }
+</style>
