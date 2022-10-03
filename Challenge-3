@@ -1,0 +1,95 @@
+<div class="face">
+  <div class="mouth"></div>
+  <div class="hear-1"></div>
+  <div class="hear-2 hear-2__left"></div>
+  <div class="hear-2 hear-2__right"></div>
+  <div class="hear-3 hear-3__left"></div>
+  <div class="hear-3 hear-3__right"></div>
+</div>
+<style>
+  body {
+    background: #161616;
+    
+  }
+  .face {
+    position: relative;
+    margin: 145px auto;
+    width: 80px;
+    height: 70px;
+    background: linear-gradient(to right, #FFF,#FFF 50%, #FFDEB9 50%);
+    border-radius: 0 0 60% 60%;
+  }
+  .mouth {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #161616;
+    bottom: 9px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    clip-path: polygon(0 50%,100% 50%, 100% 100%, 0% 100%);
+  }
+  .hear-1 {
+    position: absolute;
+    width: 70px;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .hear-1::before {
+    content: '';
+    position: absolute;
+    left: 25%;
+    background: #EBAE11;
+    height: 100px;
+    width: 70px;
+    border-radius: 50%;
+    clip-path: polygon(0 0, 25% 0, 25% 100%, 0% 100%);
+  }
+  .hear-1::after {
+    content: '';
+    position: absolute;
+    right: 25%;
+    background: #EBAE11;
+    height: 100px;
+    width: 70px;
+    border-radius: 50%;
+    clip-path: polygon(75% 0, 100% 0, 100% 100%, 75% 100%);
+  }
+  .hear-2 {
+    position: absolute;
+    top: -33px;
+    width: 60px;
+    height: 60px;
+    background: #EBAE11;
+    border-radius: 50%;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  }
+  .hear-2__left {
+    left: -5px;
+    transform: rotate(-30deg);
+  }
+  .hear-2__right {
+    right: -5px;
+    transform: rotate(210deg);
+  }
+  .hear-3 {
+    z-index: -1;
+    position: absolute;
+    top: -15px;
+    width: 60px;
+    height: 60px;
+    background: #EBAE11;
+    border-radius: 50%;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  }
+  .hear-3__left {
+    left: -20px;
+    transform: rotate(-70deg);
+  }
+  .hear-3__right {
+    right: -20px;
+    transform: rotate(-110deg);
+  }
+</style>
