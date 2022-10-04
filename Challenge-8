@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="letter l-1"></div>
+  <div class="letter l-2"></div>
+  <div class="letter l-3"></div>
+</div>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6592CF;
+  }
+  .container {
+    position: relative;
+    width: 180px;
+    height: 140px;
+  }
+  .letter {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50px;
+  }
+  .letter::before {
+    content: '';
+    position: absolute;
+    right: -50px;
+    top: 0;
+    height: 80px;
+    width: 100px;
+    border-radius: 40px;
+  }
+  .letter::after {
+    content: '';
+    position: absolute;
+    right: -50px;
+    bottom: 0;
+    height: 80px;
+    width: 100px;
+    border-radius: 40px;
+  }
+  .l-1.letter {
+    z-index: 2;
+    left: 0;
+    background: #060F55;
+  }
+  .l-1.letter::before {
+    background: #060F55;
+  }
+  .l-1.letter::after {
+    background: #060F55;
+  }
+  .l-2.letter {
+    z-index: 1;
+    left: 40px;
+    background: #2E3B9F;
+  }
+  .l-2.letter::before {
+    background: #2E3B9F;
+  }
+  .l-2.letter::after {
+    background: #2E3B9F;
+  }
+  .l-3.letter {
+    left: 80px;
+    background: #515DBD;
+  }
+  .l-3.letter::before {
+    background: #515DBD;
+  }
+  .l-3.letter::after {
+    background: #515DBD;
+  }
+</style>
