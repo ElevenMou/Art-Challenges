@@ -1,0 +1,77 @@
+<div class="letter">
+  <div class="part-1 top"></div>
+  <div class="part-1 bottom"></div>
+  <div class="part-2"></div>
+</div>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E3516E;
+  }
+  .letter {
+    position: relative;
+    width: 180px;
+    height: 160px;
+  }
+  .part-1 {
+    position: absolute;
+    left: 40px;
+    height: 30px;
+    width: 100px;
+    background: #FADE8B;
+    border-radius: 20px;
+  }
+  .part-1.top {
+    top: 0;
+  }
+  .part-1.top::after {
+    content: '';
+    position: absolute;
+    right: -40px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FADE8B;
+  }
+  .part-1.bottom {
+    bottom: 0;
+  }
+  .part-1.bottom::after {
+    content: '';
+    position: absolute;
+    left: -40px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FADE8B;
+  }
+  .part-2 {
+    position: absolute;
+    height: 100px;
+    width: 50px;
+    top: 30px;
+    left: 50%;
+    background: #FADE8B;
+    transform: translateX(-50%);
+  }
+  .part-2::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    height: 100px;
+    width: 30px;
+    border-radius: 0 10px 10px 0;
+    background: #E3516E;
+  }
+  .part-2::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    height: 100px;
+    width: 30px;
+    border-radius: 10px 0 0 10px;
+    background: #E3516E;
+  }
+</style>
