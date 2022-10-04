@@ -1,0 +1,45 @@
+<div class="letter">
+  <div class="part-1"></div>
+  <div class="part-2"></div>
+  <div class="part-3"></div>
+</div>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    background: #998235;
+  }
+  .letter {
+    position: relative;
+    width: 130px;
+    height: 100%;
+  }
+  .part-1 {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 230px;
+    width: 40px;
+    background: #0B2429;
+  }
+  .part-2 {
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 230px;
+    width: 40px;
+    background: #0B2429;
+  }
+  .part-3 {
+    position: absolute;
+    right: 45px;
+    bottom: 70px;
+    height: 160px;
+    width: 40px;
+    background: #FCBE5C;
+    transform: skewX(20deg)
+  }
+</style>
