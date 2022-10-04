@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="letter"></div>
+  <div class="shadow"></div>
+</div>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #926927;
+  }
+  .container {
+    position: relative;
+    width: 120px;
+    height: 160px;
+  }
+  .letter {
+    z-index: 20;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 100px;
+    background: #fff;
+    border-radius: 30px;
+  }
+  .letter::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 120px;
+    width: 60px;
+    background: #6D480A;
+    border-radius: 10px;
+  }
+  .letter::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    height: 120px;
+    width: 40px;
+    background: #926927;
+    border-radius: 10px;
+  }
+  .shadow {
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    background: #6D480A;
+    border-radius: 30px;
+  }
+</style>
