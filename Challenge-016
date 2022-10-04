@@ -1,0 +1,48 @@
+<div class="part p1"></div>
+<div class="part p2"></div>
+<div class="part p3"></div>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0;
+    background: #62306D;
+  }
+  .part {
+    position: relative;
+    background: #F7EC7D;
+  }
+  .part.p1 {
+    width: 100px;
+    height: 100px;
+  }
+  .part.p2 {
+    width: 100px;
+    height: 200px;
+  }
+  .part.p3 {
+    width: 100px;
+    height: 100px;
+  }
+  .part::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 20px solid;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .p1.part::after,
+  .p3.part::after{
+    border-color: #AA445F;
+    background: #E38F66;
+  }
+  .p2.part::after{
+    border-color: #E38F66;
+    background: #AA445F;
+  }
+</style>
