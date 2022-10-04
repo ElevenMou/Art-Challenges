@@ -1,0 +1,43 @@
+<div></div>
+<div></div>
+<style>
+  body {
+    display: grid;
+    place-items: center;
+    background: #E3516E;
+  }
+  div:first-of-type {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: #51B5A9;
+    border-radius: 50%;
+  }
+  div:first-of-type::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #FADE8B;
+    border-radius: 50%;
+    clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%);
+  }
+  div:first-of-type::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #F7F3D7;
+    border-radius: 50%;
+    clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0 100%);
+  }
+  div:last-of-type {
+    position: absolute;
+    bottom: 50px;
+    width: 200px;
+    height: 200px;
+    background: #E3516E;
+    border-radius: 50%;
+    clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+  }
+</style>
