@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="circle c1"></div>
+  <div class="circle c2"></div>
+</div>
+<style>
+  body {
+    display: grid;
+    place-items: center;
+    background: #09042A;
+  }
+  .container {
+    position: relative;
+    width: 250px;
+    height: 150px;
+  }
+  .circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  .c1.circle {
+    background: #7B3F61;
+  }
+  .c1.circle::after {
+    content: '';
+    position: absolute;
+    right: -100px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #09042A;
+    z-index: 2;
+    clip-path: polygon(0 0, 25px 0, 25px 100%, 0 100%)
+  }
+  .c2.circle {
+    background: #E78481;
+    right: 0;
+  }
+  .c2.circle::after {
+    content: '';
+    position: absolute;
+    left: -100px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #09042A;
+    z-index: 2;
+    clip-path: polygon(calc(100% - 25px) 0, 100% 0, 100% 100%, calc(100% - 25px) 100%)
+  }
+</style>
