@@ -1,0 +1,42 @@
+<div class="container">
+   <div class="square">
+      <div class="circle"></div>
+   </div>
+</div>
+<style>
+  body {
+    display: grid;
+    place-items: center;
+    background: #0B2429;
+  }
+  .container {
+    width: 285px;
+    height: 200px;
+  }
+  .square {
+    display: grid;
+    place-items: center;
+    width: 200px;
+    height: 100%;
+    background: #998235;
+    transform: rotate(45deg);
+    border-radius: 50% 0;
+    margin-left: 40px;
+  }
+  .circle {
+    display: grid;
+    place-items: center;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: #F3AC3C;
+    border: 20px solid #0B2429;
+  }
+  .circle::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #0B2429;
+  }
+</style>
