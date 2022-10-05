@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="triangle t1"></div>
+  <div class="triangle t2"></div>
+</div>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F2F2B6;
+  }
+  .container {
+    position: relative;
+    width: 280px;
+    height: 130px;
+  }
+  .triangle {
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  }
+  .t1.triangle {
+    background: #FD4602;
+    left: 20px;
+  }
+  .t2.triangle {
+    background: #FD4602;
+    right: 0;
+    transform: rotate(180deg);
+    background: #FF6D00;
+  }
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    background: #FF6D00;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  }
+  .container::before {
+    content: '';
+    position: absolute;
+    right: 20px;
+    width: 150px;
+    height: 100%;
+    background: #FD4602;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    z-index: 2;
+  }
+</style>
