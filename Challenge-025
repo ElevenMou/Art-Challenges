@@ -1,0 +1,68 @@
+<div class="container">
+  <div></div>
+  <div></div>
+</div>
+<style>
+  body {
+    display: grid;
+    place-items: center;
+    background: #222;
+  }
+  .container {
+    width: 145px;
+    height: 177px;
+  }
+  .container div:first-of-type {
+    position: relative;
+    width: 90px;
+    height: 126px
+  }
+  .container div:first-of-type::before {
+    content: '';
+    position: absolute;
+    background: #F2994A;
+    width: 30px;
+    height: 80px;
+    transform: rotate(45deg);
+    left: 33px;
+  }
+  .container div:first-of-type::after {
+    content: '';
+    position: absolute;
+    background: #F2994A;
+    width: 30px;
+    height: 80px;
+    transform: rotate(-45deg);
+    top: 48px;
+    left: 20px;
+    border-radius: 10px 0;
+  }
+  .container div:last-of-type {
+    position: absolute;
+    top: 111px;
+    right: 129px;
+    width: 90px;
+    height: 126px;
+    transform: rotate(180deg)
+  }
+  .container div:last-of-type::before {
+    content: '';
+    position: absolute;
+    background: #2D9CDB;
+    width: 30px;
+    height: 80px;
+    transform: rotate(45deg);
+    left: 33px;
+  }
+  .container div:last-of-type::after {
+    content: '';
+    position: absolute;
+    background: #2D9CDB;
+    width: 30px;
+    height: 80px;
+    transform: rotate(-45deg);
+    top: 48px;
+    left: 20px;
+    border-radius: 10px 0;
+  }
+</style>
