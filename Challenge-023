@@ -1,0 +1,35 @@
+<div class="part-1"></div>
+<div class="part-2"></div>
+<div class="part-3"></div>
+<style>
+  body {
+    background: #0B2429;
+  }
+  .part-1 {
+    width: 100px;
+    height: 100px;
+    background: #F3AC3C;
+    position: absolute;
+    top: 135px;
+    left: 150px;
+    transform: rotate(45deg);
+  }
+  .part-2 {
+    width: 100px;
+    height: 50px;
+    background: #1A4341;
+    position: absolute;
+    top: 90px;
+    left: 185px;
+    transform: rotate(45deg) skewX(45deg) ;
+  }
+  .part-3 {
+    width: 100px;
+    height: 50px;
+    background: #998235;
+    position: absolute;
+    top: 90px;
+    right: 185px;
+    transform: rotate(-45deg) skewX(-45deg) ;
+  }
+</style>
